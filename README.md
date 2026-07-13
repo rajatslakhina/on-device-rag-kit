@@ -95,7 +95,9 @@ for try await token in answer.stream {
 - `swift build` and `swift test` (77/77 passing) were run on a Linux Swift toolchain — the library is pure Foundation by design, so this exercises all of it.
 - The companion demo app is a separate repo consuming this package as a **remote** SPM dependency by its git URL, exactly like an external consumer.
 
-Demo app: (companion repo link is added here immediately after that repo is pushed)
+## Demo app
+
+→ **[on-device-rag-kit-demo-app](https://github.com/rajatslakhina/on-device-rag-kit-demo-app)** — a SwiftUI app that consumes this package as a **remote** SPM dependency (by this repo's git URL, branch `main`, exactly like an external consumer) and puts the pipeline on screen: streaming answers with full retrieval provenance, a live exact-vs-ANN index swap absorbed by the embed cache, and a memory-pressure trim button wired to `trim(toFraction:)`.
 
 ## License
 
